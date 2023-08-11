@@ -1,0 +1,2 @@
+chrome.runtime.onInstalled.addListener((()=>{console.log("I just installed my chrome exteniosn")})),chrome.runtime.onMessage.addListener((function(e,o){return console.log(e),function(e){const o=indexedDB.open("myFacebookStore",1);o.onupgradeneeded=function(e){const o=e.target.result.createObjectStore("myFacebookStore",{keyPath:"id"});console.log(o)},o.onsuccess=function(o){o.target.result.transaction(["myFacebookStore"],"readwrite").objectStore("myFacebookStore").add(e)}}(e),!0}));
+//# sourceMappingURL=background.js.map
